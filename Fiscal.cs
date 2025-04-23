@@ -41,13 +41,14 @@ public static class Fiscal
     private static void Info(string text) => Logging?.Invoke(text);
     private static void Error(string text, Exception? ex = null) => Logging?.Invoke(text, true, ex);
 
-    public static bool Activate()
+    public static bool Activate(params string[] args)
     {
         Info($"Активация фискальной интеграции \"{Name} {version}\"...");
         try
         {
             // Поключение драйвера или HTTP-клиента
             Info($"Фискальная интеграция запущена!");
+            // Настройка драйвера
             isActivated = true;
             return true;
         }
@@ -67,11 +68,10 @@ public static class Fiscal
         isActivated = false;
     }
 
-    public static bool Connect(params string[] args)
+    public static bool Connect()
     {
         try
         {
-            // Настройка драйвера
             // Попытка подключения к ККТ
             if (!IsConnected)
                 throw new Exception($"Не удалось подкючиться к ККТ (Ошибка: {LastError})");
