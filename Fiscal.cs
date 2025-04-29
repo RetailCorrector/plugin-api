@@ -33,6 +33,10 @@ public static class Fiscal
     /// </summary>
     public static string LastError => "";
     /// <summary>
+    /// Количество неотправленных чеков
+    /// </summary>
+    public static int UnsendDocumentsCount => 0;
+    /// <summary>
     /// Формат фискального документа
     /// </summary>
     public static FiscalFormat Format => format;
