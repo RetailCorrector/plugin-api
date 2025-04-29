@@ -45,7 +45,7 @@ public static class Fiscal
     private static void Info(string text) => Logging?.Invoke(text);
     private static void Error(string text, Exception? ex = null) => Logging?.Invoke(text, true, ex);
 
-    public static bool Activate(params string[] args)
+    public static bool Activate(string args)
     {
         Info($"Активация фискальной интеграции \"{Name} {version}\"...");
         try
