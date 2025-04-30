@@ -30,8 +30,9 @@ public abstract class Fiscal : IDisposable
         Logging?.Invoke(text, true, ex);
     public bool CreateReceipt(Receipt info)
     {
-        if (SessionStage == SessionStatus.Expired && !CloseSession()) return false;
-        if (SessionStage == SessionStatus.Closed && !OpenSession()) return false;
+        if (SessionStatus == SessionStatus.Unknown) return false;
+        if (SessionStatus == SessionStatus.Expired && !CloseSession()) return false;
+        if (SessionStatus == SessionStatus.Closed && !OpenSession()) return false;
         if (!OpenReceipt(info)) return CancelDocument();
         foreach (var pos in info.Items)
             if (!RegisterPosition(pos)) return CancelDocument();
@@ -40,7 +41,7 @@ public abstract class Fiscal : IDisposable
         return true;
     }
 
-    protected abstract SessionStatus SessionStage { get; }
+    protected abstract SessionStatus SessionStatus { get; }
     public abstract bool IsConnected { get; }
     public abstract string LastErrorMessage { get; }
     public abstract int UnsendCounter { get; }
