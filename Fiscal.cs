@@ -45,9 +45,13 @@ public abstract class Fiscal : IDisposable
     public abstract string LastErrorMessage { get; }
     public abstract int UnsendCounter { get; }
 
+    protected virtual bool CancelDocument()
+    {
+        Info($"Отмена документа...");
+        return false;
+    }
     public abstract bool Connect();
     protected abstract bool OpenSession();
-    protected abstract bool CancelDocument();
     protected abstract bool OpenReceipt(Receipt info);
     protected abstract bool RegisterPosition(Position info);
     protected abstract bool Payment(Payment info);
