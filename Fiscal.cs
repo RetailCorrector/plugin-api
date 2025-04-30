@@ -59,6 +59,8 @@ public abstract class Fiscal : IDisposable
         Info($"Отмена документа...");
         return false;
     }
+
+    public abstract bool Configure(string args);
     public abstract bool Connect();
     protected abstract bool OpenSession();
     protected abstract bool OpenReceipt(Receipt info);
