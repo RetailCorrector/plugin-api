@@ -41,6 +41,14 @@ public abstract class Fiscal : IDisposable
         return true;
     }
 
+    protected bool Payment(Payment info)
+    {
+        var arr = (uint[])info;
+        for (byte type = 0; type < 5; type++)
+            if (arr[type] != 0 && !SinglePayment(type, arr[type])) return false;
+        return true;
+    }
+
     protected abstract SessionStatus SessionStatus { get; }
     public abstract bool IsConnected { get; }
     public abstract string LastErrorMessage { get; }
@@ -55,7 +63,6 @@ public abstract class Fiscal : IDisposable
     protected abstract bool OpenSession();
     protected abstract bool OpenReceipt(Receipt info);
     protected abstract bool RegisterPosition(Position info);
-    protected abstract bool Payment(Payment info);
     protected abstract bool SinglePayment(byte type, uint sum);
     protected abstract bool CloseReceipt(uint? totalSum);
     protected abstract bool CloseSession();
