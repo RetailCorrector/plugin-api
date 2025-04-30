@@ -19,7 +19,7 @@ public abstract class Fiscal : IDisposable
     /// Формат фискального документа
     /// </summary>
     public FiscalFormat DocFormat => ffd;
-    public event LoggingRecord? Logging;
+    public static event LoggingRecord? Logging;
 
     private AssemblyName AssemblyName => GetType().Assembly.GetName();
     protected FiscalFormat ffd = FiscalFormat.Unknown;
