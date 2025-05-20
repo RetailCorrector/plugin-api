@@ -4,12 +4,11 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Version>0.1</Version>
+	<Version>1.0</Version>
     <RootNamespace>RetailCorrector</RootNamespace>
     <AssemblyName>RetailCorrector.Fiscal</AssemblyName>
     <PackageId>RetailCorrector.Fiscal</PackageId>
     <Authors>Ornaras</Authors>
-    <Company>$(Authors)</Company>
     <Product>RetailCorrector.Fiscal</Product>
   </PropertyGroup>
 
