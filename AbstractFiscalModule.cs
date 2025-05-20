@@ -11,6 +11,7 @@ namespace RetailCorrector
             OnLog?.Invoke(isError, message, exception);
         protected internal void Notify(string message) => OnNotify?.Invoke(message);
 
+        public abstract Task<uint> CountUnsendDocs();
         public abstract Task<bool> OnLoad(AssemblyLoadContext assembly);
         public abstract Task<bool> ProcessingReceipt(Receipt receipt);
         public abstract Task OnUnload();
