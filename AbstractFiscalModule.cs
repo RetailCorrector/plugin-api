@@ -1,4 +1,6 @@
-﻿namespace RetailCorrector
+﻿using System.Runtime.Loader;
+
+namespace RetailCorrector
 {
     public abstract class AbstractFiscalModule
     {
@@ -9,7 +11,7 @@
             OnLog?.Invoke(isError, message, exception);
         protected internal void Notify(string message) => OnNotify?.Invoke(message);
 
-        public abstract Task<bool> OnLoad();
+        public abstract Task<bool> OnLoad(AssemblyLoadContext assembly);
         public abstract Task<bool> ProcessingReceipt(Receipt receipt);
         public abstract Task OnUnload();
     }
