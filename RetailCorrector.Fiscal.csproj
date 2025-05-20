@@ -10,10 +10,12 @@
     <PackageId>RetailCorrector.Fiscal</PackageId>
     <Authors>Ornaras</Authors>
     <Product>RetailCorrector.Fiscal</Product>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<RepositoryUrl>https://github.com/ornaras/RetailCorrector.Fiscal</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RetailCorrector.Data\RetailCorrector.Data.csproj" />
+    <PackageReference Include="RetailCorrector.Data" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
