@@ -26,8 +26,7 @@ namespace RetailCorrector
         /// <summary>
         /// Тип коррекции
         /// </summary>
-        public readonly CorrType CorrectionType => 
-            ActNumber is null ? CorrType.ByYourself : CorrType.ByTaxService;
+        public CorrType CorrectionType { get; set; }
         /// <summary>
         /// Номер документа (акта), поясняющего причину создания чека(ов) коррекции<br/>
         /// </summary>
