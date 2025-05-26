@@ -3,11 +3,11 @@
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<RepositoryUrl>https://github.com/ornaras/RetailCorrector</RepositoryUrl>
+		<RepositoryUrl>https://github.com/RetailCorrector/data</RepositoryUrl>
 		<RootNamespace>RetailCorrector</RootNamespace>
-		<Version>1.0</Version>
+		<Version>1.1</Version>
 		<Authors>Ornaras</Authors>
-		<AssemblyName>RetailCorrector.Data</AssemblyName>
+		<AssemblyName>RetailCorrectorData</AssemblyName>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
