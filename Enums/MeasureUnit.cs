@@ -3,8 +3,12 @@
     /// <summary>
     /// Единица измерения
     /// </summary>
-    public enum MeasureUnit : byte
+    public enum MeasureUnit
     {
+        /// <summary>
+        /// Отсутствует
+        /// </summary>
+        None = -1,
         /// <summary>
         /// Штук/Единиц
         /// </summary>
