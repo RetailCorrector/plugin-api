@@ -24,7 +24,7 @@
         /// <summary>
         /// Единица измерений
         /// </summary>
-        public MeasureUnit MeasureUnit { get; set; }
+        public MeasureUnit? MeasureUnit { get; set; }
         /// <summary>
         /// Цена
         /// </summary>
