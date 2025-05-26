@@ -6,6 +6,10 @@
     public enum SessionStatus 
     { 
         /// <summary>
+        /// Неизвестно
+        /// </summary>
+        Unknown = -1,
+        /// <summary>
         /// Смена закрыта
         /// </summary>
         Closed, 
