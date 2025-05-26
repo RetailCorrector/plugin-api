@@ -37,5 +37,21 @@
         /// Итоговая сумма
         /// </summary>
         public uint TotalSum { get; set; }
+
+        /// <summary>
+        /// Клонирование позиции
+        /// </summary>
+        public Position Clone() =>
+            new()
+            {
+                Name = Name,
+                PayType = PayType,
+                PosType = PosType,
+                TaxRate = TaxRate,
+                MeasureUnit = MeasureUnit,
+                Price = Price,
+                Quantity = Quantity,
+                TotalSum = TotalSum
+            };
     }
 }

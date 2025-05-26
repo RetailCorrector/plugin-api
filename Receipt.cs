@@ -40,5 +40,20 @@ namespace RetailCorrector
         /// Округлённая итоговая сумма
         /// </summary>
         public uint? RoundedSum { get; set; }
+
+        /// <summary>
+        /// Клонирование чека
+        /// </summary>
+        public Receipt Clone() =>
+            new()
+            {
+                Created = Created,
+                Operation = Operation,
+                Items = (Position[])Items.Clone(),
+                FiscalSign = FiscalSign,
+                ActNumber = ActNumber,
+                Payment = Payment,
+                RoundedSum = RoundedSum
+            };
     }
 }
