@@ -1,5 +1,4 @@
-﻿using RetailCorrector.Enums;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RetailCorrector
 {

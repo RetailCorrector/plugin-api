@@ -7,7 +7,7 @@
 		<RootNamespace>RetailCorrector</RootNamespace>
 		<Version>1.1</Version>
 		<Authors>Ornaras</Authors>
-		<AssemblyName>RetailCorrectorData</AssemblyName>
+		<AssemblyName>RetailCorrector.Data</AssemblyName>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
