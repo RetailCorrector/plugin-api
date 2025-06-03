@@ -1,4 +1,4 @@
-using System.Runtime.Loader;
+﻿using System.Runtime.Loader;
 
 namespace RetailCorrector
 {
@@ -10,10 +10,11 @@ namespace RetailCorrector
         protected internal void Log(bool isError, string message, Exception? exception = null) =>
             OnLog?.Invoke(isError, message, exception);
         protected internal void Notify(string message) => OnNotify?.Invoke(message);
-
+        
         public abstract Task<uint> CountUnsendDocs();
         public abstract Task OnLoad(AssemblyLoadContext assembly);
         public abstract Task<bool> Connect();
+        public abstract Task Disconnect();
         public abstract Task<bool> ProcessingReceipt(Receipt receipt);
         public abstract Task OnUnload();
     }
