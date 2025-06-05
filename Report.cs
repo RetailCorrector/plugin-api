@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RetailCorrector
+﻿namespace RetailCorrector
 {
     public struct Report
     {

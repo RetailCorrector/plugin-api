@@ -43,16 +43,15 @@ namespace RetailCorrector
         /// <summary>
         /// Клонирование чека
         /// </summary>
-        public Receipt Clone() =>
-            new()
-            {
-                Created = Created,
-                Operation = Operation,
-                Items = (Position[])Items.Clone(),
-                FiscalSign = FiscalSign,
-                ActNumber = ActNumber,
-                Payment = Payment,
-                RoundedSum = RoundedSum
-            };
+        public Receipt Clone() => new()
+        {
+            Created = Created,
+            Operation = Operation,
+            Items = (Position[])Items.Clone(),
+            FiscalSign = FiscalSign,
+            ActNumber = ActNumber,
+            Payment = Payment,
+            RoundedSum = RoundedSum
+        };
     }
 }

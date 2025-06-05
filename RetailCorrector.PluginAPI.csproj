@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.5</Version>
+    <RootNamespace>RetailCorrector</RootNamespace>
+    <Authors>Ornaras</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/RetailCorrector/plugin-api</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
