@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.1</Version>
+    <RootNamespace>RetailCorrector</RootNamespace>
+    <AssemblyName>RetailCorrector.Fiscal</AssemblyName>
+    <PackageId>RetailCorrector.Fiscal</PackageId>
+    <Authors>Ornaras</Authors>
+    <Product>RetailCorrector.Fiscal</Product>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<RepositoryUrl>https://github.com/ornaras/RetailCorrector.Fiscal</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\RetailCorrector.Data\RetailCorrector.Data.csproj" />
+  </ItemGroup>
+
+</Project>
