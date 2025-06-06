@@ -17,7 +17,7 @@ namespace RetailCorrector.Plugin
         protected internal void Notify(string text, string? caption = null) => Notification?.Invoke(text, caption);
 
         public abstract Task OnLoad(AssemblyLoadContext ctx);
-        public abstract Task OnUnload(AssemblyLoadContext ctx);
+        public abstract Task OnUnload();
         
         public abstract Task<IEnumerable<Receipt>> Parse(CancellationToken token);
     }

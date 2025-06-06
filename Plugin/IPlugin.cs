@@ -10,5 +10,5 @@ public interface IPlugin
     event Action<string, string?>? Notification;
 
     Task OnLoad(AssemblyLoadContext ctx);
-    Task OnUnload(AssemblyLoadContext ctx);
+    Task OnUnload();
 }

@@ -17,6 +17,6 @@ namespace RetailCorrector.Plugin
         public abstract Task<uint> CountDocsInBuffer();
         public abstract Task<bool> ProcessingReceipt(Receipt receipt);
         public abstract Task Disconnect();
-        public abstract Task OnUnload(AssemblyLoadContext ctx);
+        public abstract Task OnUnload();
     }
 }
