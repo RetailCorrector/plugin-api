@@ -4,6 +4,8 @@ namespace RetailCorrector.Plugin;
 
 public interface IPlugin
 {
+    string Name { get; }
+    
     event Action<string, bool, Exception> Logging;
     event Action<string, string?> Notification;
 

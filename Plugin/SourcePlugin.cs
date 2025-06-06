@@ -4,6 +4,8 @@ namespace RetailCorrector.Plugin
 {
     public abstract class SourcePlugin: IPlugin
     {
+        public abstract string Name { get; }
+        
         public event Action<string, bool, Exception>? Logging;
         public event Action<string, string?>? Notification;
         public event Action<int>? ParseStarted;
