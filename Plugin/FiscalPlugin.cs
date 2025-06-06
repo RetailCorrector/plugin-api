@@ -6,10 +6,10 @@ namespace RetailCorrector.Plugin
     {
         public abstract string Name { get; }
                 
-        public event Action<string, bool, Exception>? Logging;
+        public event Action<string, bool, Exception?>? Logging;
         public event Action<string, string?>? Notification;
         
-        protected internal void Log(string text, bool error, Exception ex) => Logging?.Invoke(text, error, ex);
+        protected internal void Log(string text, bool error, Exception? ex) => Logging?.Invoke(text, error, ex);
         protected internal void Notify(string text, string? caption = null) => Notification?.Invoke(text, caption);
         
         public abstract Task OnLoad(AssemblyLoadContext ctx);
