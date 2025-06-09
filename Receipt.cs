@@ -36,9 +36,9 @@ namespace RetailCorrector
         /// </summary>
         public Payment Payment { get; set; }
         /// <summary>
-        /// Округлённая итоговая сумма
+        /// Итоговая сумма
         /// </summary>
-        public uint? RoundedSum { get; set; }
+        public uint TotalSum { get; set; }
 
         /// <summary>
         /// Клонирование чека
@@ -51,7 +51,7 @@ namespace RetailCorrector
             FiscalSign = FiscalSign,
             ActNumber = ActNumber,
             Payment = Payment,
-            RoundedSum = RoundedSum
+            TotalSum = TotalSum
         };
     }
 }
