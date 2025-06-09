@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace RetailCorrector
+﻿namespace RetailCorrector
 {
     /// <summary>
     /// Формат фискальных документов
     /// </summary>
-    public enum FiscalFormat
+    public enum FiscalFormat : byte
     {
         /// <summary>
         /// Неизвестный формат

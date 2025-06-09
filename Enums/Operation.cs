@@ -5,7 +5,7 @@ namespace RetailCorrector
     /// <summary>
     /// Операция чека
     /// </summary>
-    public enum Operation
+    public enum Operation : byte
     {
         /// <summary>
         /// Приход

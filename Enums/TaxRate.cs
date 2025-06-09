@@ -5,7 +5,7 @@ namespace RetailCorrector
     /// <summary>
     /// Ставки НДС
     /// </summary>
-    public enum TaxRate
+    public enum TaxRate: byte
     {
         /// <summary>
         /// Ставка 20%

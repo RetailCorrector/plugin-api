@@ -3,5 +3,5 @@
 namespace RetailCorrector
 {
     [JsonConverter(typeof(JsonStringEnumConverter<HttpMethod>))]
-    public enum HttpMethod { GET, POST, PATCH, PUT, DELETE }
+    public enum HttpMethod : byte { GET, POST, PATCH, PUT, DELETE }
 }

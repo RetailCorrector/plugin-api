@@ -5,7 +5,7 @@ namespace RetailCorrector
     /// <summary>
     /// Тип оплаты позиции
     /// </summary>
-    public enum PaymentType
+    public enum PaymentType : byte
     {
         /// <summary>
         /// Полная предварительная оплата

@@ -5,12 +5,12 @@ namespace RetailCorrector
     /// <summary>
     /// Единица измерения
     /// </summary>
-    public enum MeasureUnit
+    public enum MeasureUnit : byte
     {
         /// <summary>
         /// Отсутствует
         /// </summary>
-        None = -1,
+        None = 1,
         /// <summary>
         /// Штук/Единиц
         /// </summary>

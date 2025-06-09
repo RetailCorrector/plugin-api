@@ -5,7 +5,7 @@ namespace RetailCorrector
     /// <summary>
     /// Тип коррекции
     /// </summary>
-    public enum CorrType
+    public enum CorrType : byte
     {
         /// <summary>
         /// Самостоятельная коррекция

@@ -5,7 +5,7 @@ namespace RetailCorrector
     /// <summary>
     /// Тип позиции
     /// </summary>
-    public enum PositionType
+    public enum PositionType : byte
     {
         /// <summary>
         /// Товар

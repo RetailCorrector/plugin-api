@@ -3,7 +3,7 @@
     /// <summary>
     /// Статус смены
     /// </summary>
-    public enum SessionStatus 
+    public enum SessionStatus : sbyte
     { 
         /// <summary>
         /// Неизвестно
