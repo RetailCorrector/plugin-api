@@ -37,6 +37,10 @@
         /// Итоговая сумма
         /// </summary>
         public uint TotalSum { get; set; }
+        /// <summary>
+        /// Отраслевой реквизит позиции
+        /// </summary>
+        public IndustryData[] IndustryData { get; set; }
 
         /// <summary>
         /// Клонирование позиции
@@ -50,7 +54,8 @@
             MeasureUnit = MeasureUnit,
             Price = Price,
             Quantity = Quantity,
-            TotalSum = TotalSum
+            TotalSum = TotalSum,
+            IndustryData = (IndustryData[])IndustryData.Clone(),
         };
     }
 }

@@ -39,6 +39,10 @@ namespace RetailCorrector
         /// Итоговая сумма
         /// </summary>
         public uint TotalSum { get; set; }
+        /// <summary>
+        /// Отраслевой реквизит чека
+        /// </summary>
+        public IndustryData[] IndustryData { get; set; }
 
         /// <summary>
         /// Клонирование чека
@@ -51,7 +55,8 @@ namespace RetailCorrector
             FiscalSign = FiscalSign,
             ActNumber = ActNumber,
             Payment = Payment,
-            TotalSum = TotalSum
+           TotalSum = TotalSum,
+           IndustryData = (IndustryData[])IndustryData.Clone(),
         };
     }
 }
