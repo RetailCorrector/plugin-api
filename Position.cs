@@ -41,6 +41,10 @@
         /// Отраслевой реквизит позиции
         /// </summary>
         public IndustryData[] IndustryData { get; set; }
+        /// <summary>
+        /// Коды товара
+        /// </summary>
+        public PositionCode[] Codes { get; set; }
 
         /// <summary>
         /// Клонирование позиции
@@ -56,6 +60,7 @@
             Quantity = Quantity,
             TotalSum = TotalSum,
             IndustryData = (IndustryData[])IndustryData.Clone(),
+            Codes = (PositionCode[])Codes.Clone()
         };
     }
 }
