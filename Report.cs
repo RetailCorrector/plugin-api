@@ -1,7 +1,8 @@
 ﻿namespace RetailCorrector
 {
-    public struct Report
+    public class Report
     {
+        public static Report Current { get; set; }
         public HttpMethod Method { get; set; }
         public string Url { get; set; }
         public Dictionary<string, List<string>>? Headers { get; set; }
