@@ -45,7 +45,7 @@
         /// Коды товара
         /// </summary>
         public PositionCode[] Codes { get; set; }
-
+        
         /// <summary>
         /// Клонирование позиции
         /// </summary>
