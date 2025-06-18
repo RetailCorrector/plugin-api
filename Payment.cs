@@ -14,6 +14,6 @@ namespace RetailCorrector
 
         [ForeignKey(nameof(Receipt))]
         public int ReceiptId { get; set; }
-        public Receipt Receipt { get; set; }
+        public Receipt Receipt { get; set; } = null!;
     }
 }

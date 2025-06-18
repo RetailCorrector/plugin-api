@@ -9,7 +9,7 @@ namespace RetailCorrector
         public int GosId { get; set; }
         public DateOnly DocDate { get; set; }
         public int DocNumb { get; set; }
-        public string DocValue { get; set; }
+        public string DocValue { get; set; } = "";
 
         [ForeignKey(nameof(Position))]
         public int? PositionId { get; set; }
