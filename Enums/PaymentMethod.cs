@@ -3,7 +3,7 @@
     /// <summary>
     /// Тип оплаты позиции
     /// </summary>
-    public enum PaymentType : byte
+    public enum PaymentMethod : byte
     {
         /// <summary>
         /// Полная предварительная оплата

@@ -121,14 +121,14 @@ public static class DisplayInfo
         { PositionType.Mark, "ТМ" },
     };
 
-    public static Dictionary<PaymentType, string> PaymentTypes { get; } = new()
+    public static Dictionary<PaymentMethod, string> PaymentTypes { get; } = new()
     {
-        { PaymentType.FullPrepaid, "Полная предоплата" },
-        { PaymentType.PartPrepaid, "Частичная предоплата" },
-        { PaymentType.Advance, "Аванс" },
-        { PaymentType.FullPayment, "Полная оплата" },
-        { PaymentType.PartPayment, "Частичная оплата" },
-        { PaymentType.ToCredit, "Передача в кредит" },
-        { PaymentType.Postpaid, "Оплата кредита" },
+        { PaymentMethod.FullPrepaid, "Полная предоплата" },
+        { PaymentMethod.PartPrepaid, "Частичная предоплата" },
+        { PaymentMethod.Advance, "Аванс" },
+        { PaymentMethod.FullPayment, "Полная оплата" },
+        { PaymentMethod.PartPayment, "Частичная оплата" },
+        { PaymentMethod.ToCredit, "Передача в кредит" },
+        { PaymentMethod.Postpaid, "Оплата кредита" },
     };
 }
