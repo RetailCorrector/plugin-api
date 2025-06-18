@@ -1,60 +1,18 @@
 ﻿namespace RetailCorrector
 {
-    /// <summary>
-    /// Информация о чеке
-    /// </summary>
-    public struct Receipt
+    public class Receipt
     {
-        /// <summary>
-        /// Дата и время отбития оригинального чека
-        /// </summary>
-        public DateTime Created { get; set; }
-        /// <summary>
-        /// Тип чека
-        /// </summary>
-        public Operation Operation { get; set; }
-        /// <summary>
-        /// Позиции
-        /// </summary>
-        public Position[] Items { get; set; }
-        /// <summary>
-        /// Фискальный признак
-        /// </summary>
-        public string FiscalSign { get; set; }
-        /// <summary>
-        /// Тип коррекции
-        /// </summary>
-        public CorrType CorrectionType { get; set; }
-        /// <summary>
-        /// Номер документа (акта), поясняющего причину создания чека(ов) коррекции<br/>
-        /// </summary>
-        public string? ActNumber { get; set; }
-        /// <summary>
-        /// Оплата
-        /// </summary>
-        public Payment Payment { get; set; }
-        /// <summary>
-        /// Итоговая сумма
-        /// </summary>
-        public uint TotalSum { get; set; }
-        /// <summary>
-        /// Отраслевой реквизит чека
-        /// </summary>
-        public IndustryData[] IndustryData { get; set; }
+        public int Id { get; set; }
 
-        /// <summary>
-        /// Клонирование чека
-        /// </summary>
-        public Receipt Clone() => new()
-        {
-           Created = Created,
-           Operation = Operation,
-           Items = (Position[])Items.Clone(),
-           FiscalSign = FiscalSign,
-           ActNumber = ActNumber,
-           Payment = Payment,
-           TotalSum = TotalSum,
-           IndustryData = (IndustryData[])IndustryData.Clone(),
-        };
+        public DateTime Created { get; set; }
+        public Operation Operation { get; set; }
+        public string Sign { get; set; }
+        public CorrType CorrectionType { get; set; }
+        public string? ActNumber { get; set; }
+        public uint TotalSum { get; set; }
+
+        public List<Position> Items { get; set; } = [];
+        public List<Payment> Payment { get; set; } = [];
+        public List<IndustryData> IndustryData { get; set; } = [];
     }
 }

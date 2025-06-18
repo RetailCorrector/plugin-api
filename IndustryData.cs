@@ -1,25 +1,22 @@
-﻿namespace RetailCorrector
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace RetailCorrector
 {
-    /// <summary>
-    /// Отраслевой реквизит
-    /// </summary>
-    public struct IndustryData
+    public class IndustryData
     {
-        /// <summary>
-        /// Идентификатор ФОИВ
-        /// </summary>
-        public byte GosId { get; set; }
-        /// <summary>
-        /// Дата документа основания
-        /// </summary>
-        public DateOnly Date { get; set; }
-        /// <summary>
-        /// Номер документа основания
-        /// </summary>
-        public int Number { get; set; }
-        /// <summary>
-        /// Значение отраслевого реквизита
-        /// </summary>
-        public string Value { get; set; }
+        public int Id { get; set; }
+
+        public int GosId { get; set; }
+        public DateOnly DocDate { get; set; }
+        public int DocNumb { get; set; }
+        public string DocValue { get; set; }
+
+        [ForeignKey(nameof(Position))]
+        public int? PositionId { get; set; }
+        public Position? Position { set; get; }
+
+        [ForeignKey(nameof(Receipt))]
+        public int? ReceiptId { get; set; }
+        public Receipt? Receipt { set; get; }
     }
 }
