@@ -9,6 +9,15 @@
     <Authors>Ornaras</Authors>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/RetailCorrector/plugin-api</RepositoryUrl>
+    <PackageTags>retailcorrector;api;retail</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
