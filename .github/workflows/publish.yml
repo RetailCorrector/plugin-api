@@ -25,5 +25,6 @@ jobs:
         tag_name: v${{ steps.project-info.outputs.VERSION }}
         name: ${{ steps.project-info.outputs.VERSION }}
         make_latest: true
+        token: ${{ secrets.GH_RELEASE_TOKEN }}
     - name: Publish to NuGet
       run: dotnet nuget push "bin/Debug/*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source "https://api.nuget.org/v3/index.json"
