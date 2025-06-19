@@ -44,7 +44,7 @@
         /// <summary>
         /// Коды товара
         /// </summary>
-        public PositionCode[] Codes { get; set; }
+        public PositionCode Codes { get; set; }
         
         /// <summary>
         /// Клонирование позиции
@@ -60,7 +60,7 @@
             Quantity = Quantity,
             TotalSum = TotalSum,
             IndustryData = (IndustryData[])IndustryData.Clone(),
-            Codes = (PositionCode[])Codes.Clone()
+            Codes = Codes.Clone()
         };
     }
 }
