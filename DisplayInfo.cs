@@ -4,6 +4,9 @@ using RetailCorrector;
 
 public static class DisplayInfo
 {
+    /// <summary>
+    /// Локализация единиц измерения
+    /// </summary>
     public static Dictionary<MeasureUnit, string> MeasureUnits { get; } = new()
     {
         { MeasureUnit.Default, "По-штучно" },
@@ -31,6 +34,10 @@ public static class DisplayInfo
         { MeasureUnit.TByte, "Терабайт" },
         { MeasureUnit.Other, "Другое" },
     };
+
+    /// <summary>
+    /// Локализация единиц измерения (сокращённый вид)
+    /// </summary>
     public static Dictionary<MeasureUnit, string> ShortMeasureUnits { get; } = new()
     {
         { MeasureUnit.Default, "шт" },
@@ -58,12 +65,18 @@ public static class DisplayInfo
         { MeasureUnit.TByte, "ТБ" },
     };
 
+    /// <summary>
+    /// Локализация типов коррекции
+    /// </summary>
     public static Dictionary<CorrType, string> CorrectionTypes { get; } = new()
     {
         { CorrType.ByYourself, "Самостоятельно" },
         { CorrType.ByTaxService, "По предписанию" },
     };
 
+    /// <summary>
+    /// Локализация операций документа
+    /// </summary>
     public static Dictionary<Operation, string> Operations { get; } = new()
     {
         { Operation.Income, "Приход" },
@@ -72,6 +85,9 @@ public static class DisplayInfo
         { Operation.RefundOutcome, "Возврат расхода" },
     };
 
+    /// <summary>
+    /// Локализация ставок НДС
+    /// </summary>
     public static Dictionary<TaxRate, string> TaxRates { get; } = new()
     {
         { TaxRate.Tax20, "20%" },
@@ -86,6 +102,9 @@ public static class DisplayInfo
         { TaxRate.Calc7, "7/107%" },
     };
 
+    /// <summary>
+    /// Локализация типов позиции
+    /// </summary>
     public static Dictionary<PositionType, string> PositionTypes { get; } = new()
     {
         { PositionType.Product, "Товар" },
@@ -121,6 +140,9 @@ public static class DisplayInfo
         { PositionType.Mark, "ТМ" },
     };
 
+    /// <summary>
+    /// Локализация способов оплаты позиции
+    /// </summary>
     public static Dictionary<PaymentType, string> PaymentTypes { get; } = new()
     {
         { PaymentType.FullPrepaid, "Полная предоплата" },
