@@ -41,20 +41,26 @@
         /// Отраслевой реквизит чека
         /// </summary>
         public IndustryData[] IndustryData { get; set; }
+        /// <summary>
+        /// Дополнительные данные
+        /// </summary>
+        public Dictionary<string, string> Additions { get; private set; } = [];
 
         /// <summary>
         /// Клонирование чека
         /// </summary>
         public Receipt Clone() => new()
         {
-           Created = Created,
-           Operation = Operation,
-           Items = (Position[])Items.Clone(),
-           FiscalSign = FiscalSign,
-           ActNumber = ActNumber,
-           Payment = Payment,
-           TotalSum = TotalSum,
-           IndustryData = (IndustryData[])IndustryData.Clone(),
+            Created = Created,
+            Operation = Operation,
+            Items = (Position[])Items.Clone(),
+            FiscalSign = FiscalSign,
+            ActNumber = ActNumber,
+            Payment = Payment,
+            TotalSum = TotalSum,
+            IndustryData = (IndustryData[])IndustryData.Clone(),
+            CorrectionType = CorrectionType,
+            Additions = ((KeyValuePair<string, string>[])Additions.ToArray().Clone()).ToDictionary()
         };
     }
 }

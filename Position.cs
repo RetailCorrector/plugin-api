@@ -45,6 +45,10 @@
         /// Коды товара
         /// </summary>
         public PositionCode Codes { get; set; }
+        /// <summary>
+        /// Дополнительные данные
+        /// </summary>
+        public Dictionary<string, string> Additions { get; private set; }
         
         /// <summary>
         /// Клонирование позиции
@@ -60,7 +64,8 @@
             Quantity = Quantity,
             TotalSum = TotalSum,
             IndustryData = (IndustryData[])IndustryData.Clone(),
-            Codes = Codes.Clone()
+            Codes = Codes.Clone(),
+            Additions = ((KeyValuePair<string, string>[])Additions.ToArray().Clone()).ToDictionary()
         };
     }
 }
