@@ -44,7 +44,7 @@
         /// <summary>
         /// Дополнительные данные
         /// </summary>
-        public Dictionary<string, string> Additions { get; private set; } = [];
+        public Dictionary<string, string> Additions { get; private set; }
 
         /// <summary>
         /// Клонирование чека
