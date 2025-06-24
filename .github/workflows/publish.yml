@@ -16,8 +16,5 @@ jobs:
       run: sed -i "s/<\/PropertyGroup>/  <Version>$(echo $GITHUB_REF | grep -P "\d+\.\d+\.\d+" -o)<\/Version>\n  <\/PropertyGroup>/" RetailCorrector.PluginAPI.csproj
     - name: Build a project
       run: dotnet build
-    - name: Get project's version
-      id: project-info
-      run: echo "VERSION=$(sed -n 's/.*<Version>\([0-9]\+\.[0-9]\+\(\.[0-9]\+\)\?\)<\/Version>.*/\1/p' RetailCorrector.PluginAPI.csproj)" >> $GITHUB_OUTPUT
     - name: Publish to NuGet
       run: dotnet nuget push "bin/Debug/*.nupkg" --api-key ${{secrets.NUGET_API_KEY}} --source "https://api.nuget.org/v3/index.json"
