@@ -19,6 +19,10 @@ namespace RetailCorrector.Plugins
         /// Событие обновления статус прогресса
         /// </summary>
         public event Action<int>? ProgressUpdated;
+        /// <summary>
+        /// Событие получения чека
+        /// </summary>
+        public event Action<Receipt>? AddedReceipt;
 
         /// <summary>
         /// Вызов события <see cref="ParseStarted"/>
@@ -32,6 +36,12 @@ namespace RetailCorrector.Plugins
         /// <param name="value">Текущий статус прогресса</param>
         protected internal void InvokeProgressUpdated(int value) => 
             ProgressUpdated?.Invoke(value);
+        /// <summary>
+        /// Вызов события <see cref="AddedReceipt"/>
+        /// </summary>
+        /// <param name="value">Новый чек</param>
+        protected internal void InvokeAddedReceipt(Receipt value) =>
+            AddedReceipt?.Invoke(value);
 
         /// <summary>
         /// Запись в журнал действий
@@ -57,7 +67,6 @@ namespace RetailCorrector.Plugins
         /// Парсинг чеков
         /// </summary>
         /// <param name="token">Токен отмены действия</param>
-        /// <returns>Коллекция полученных чеков</returns>
-        public abstract Task<IEnumerable<Receipt>> Parse(CancellationToken token);
+        public abstract Task Parse(CancellationToken token);
     }
 }
