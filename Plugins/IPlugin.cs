@@ -13,10 +13,6 @@ public interface IPlugin
     /// Событие логирования
     /// </summary>
     event Action<string, bool, Exception?>? Logging;
-    /// <summary>
-    /// Событие оповещения
-    /// </summary>
-    event Action<string, string?>? Notification;
 
     /// <summary>
     /// Действие при загрузке плагина

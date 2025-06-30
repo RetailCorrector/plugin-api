@@ -10,7 +10,6 @@ namespace RetailCorrector.Plugins
         public abstract string Name { get; }
                 
         public event Action<string, bool, Exception?>? Logging;
-        public event Action<string, string?>? Notification;
         /// <summary>
         /// Запись в журнал действий
         /// </summary>
@@ -19,13 +18,6 @@ namespace RetailCorrector.Plugins
         /// <param name="ex">Исключение записи</param>
         protected internal void Log(string text, bool error, Exception? ex) => 
             Logging?.Invoke(text, error, ex);
-        /// <summary>
-        /// Оповещение
-        /// </summary>
-        /// <param name="text">Текст оповещения</param>
-        /// <param name="caption">Заголовок оповещения</param>
-        protected internal void Notify(string text, string? caption = null) => 
-            Notification?.Invoke(text, caption);
         
         public abstract Task OnLoad(AssemblyLoadContext ctx);
         /// <summary>

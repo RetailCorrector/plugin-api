@@ -10,6 +10,9 @@ namespace RetailCorrector.Plugins
         public abstract string Name { get; }
         
         public event Action<string, bool, Exception?>? Logging;
+        /// <summary>
+        /// Событие оповещения
+        /// </summary>
         public event Action<string, string?>? Notification;
         /// <summary>
         /// Событие запуска парсинга чеков
